@@ -9,7 +9,7 @@ function getUserInfo(username) {
 }
 
 var helpers = {
-    getPlayers: function(players) {
+    getPlayersInfo: function(players) {
         return axios.all(players.map(function(username) {
             return getUserInfo(username)
         })).then(function(info) {
